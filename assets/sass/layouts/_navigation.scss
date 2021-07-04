@@ -1,0 +1,28 @@
+.navigation {
+    @include dflex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainmenu {
+    width: 100%;
+    ul {
+        @include dflex;
+        width: 100%;
+        li {
+            a {
+                display: block;
+                padding: 30px 15px;
+                color: $color_black;
+                font-weight: 500;
+                font-size: 15px;
+                text-transform: capitalize;
+
+                &:hover {
+                    color: $color_primary;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,91 @@
+.topbar {
+    background-color: $color_secondary;
+    color: $color_white;
+    padding: 10px 0px;
+    font-size: 13px;
+
+    .topbar-items {
+        ol {
+            @include dflex;
+             li {
+                 position: relative;
+                 margin: 0px 10px;
+                 &::after{
+                     position: absolute;
+                     top: 0;
+                     left: -10px;
+                     width: 1px;
+                     content: '';
+                     height: 100%;
+                     background-color: $color_gray;
+                     opacity: 0.35;
+                 }
+                 &:first-child {
+                    &::after{
+                        display: none;
+                    }
+                 }
+
+                 a {
+                     color: $color_white;
+                 }
+             }
+        }
+    }
+
+    .topbar-social-nav {
+        ul {
+            display: flex;
+            li {
+                margin-right: 10px;
+                position: relative;
+                &::after {
+                    display: none;
+                }
+
+                &:last-child {
+                    margin-right: 0px;
+                }
+
+                a {
+                    &:hover {
+                        color: $color_primary;
+                    }
+                }
+            }
+        }
+    }
+
+    .topbar-nav {
+        ul {
+            display: flex;
+            li {
+                position: relative;
+                margin: 0px;
+                margin-left: 20px;
+                &:first-child {
+                    margin-left: 0px;
+                }
+                &::after {
+                    display: none;
+                }
+
+                a {
+                    &:hover {
+                        color: $color_primary;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header {
+    .logo {
+        padding: 9px 0px;
+        img {
+            width: calc(100% - 30px);
+        }
+    }
+}
