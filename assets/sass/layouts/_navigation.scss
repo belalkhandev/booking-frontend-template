@@ -10,6 +10,24 @@
         @include dflex;
         width: 100%;
         li {
+            position: relative;
+            &::after {
+                position: absolute;
+                top: 61%;
+                left: 50%;
+                width: 0%;
+                height: 1px;
+                background: $color_secondary;
+                content: '';
+                transform: translate(-50%, 0%);
+                transition: 200ms;
+            }
+
+            &:hover::after {
+                width: calc(100% - 30px);
+                transition: 300ms;
+            }
+
             a {
                 display: block;
                 padding: 30px 15px;

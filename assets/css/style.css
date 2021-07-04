@@ -175,6 +175,27 @@ img {
   width: 100%;
 }
 
+.mainmenu ul li {
+  position: relative;
+}
+
+.mainmenu ul li::after {
+  position: absolute;
+  top: 61%;
+  left: 50%;
+  width: 0%;
+  height: 1px;
+  background: #1a2b48;
+  content: '';
+  transform: translate(-50%, 0%);
+  transition: 200ms;
+}
+
+.mainmenu ul li:hover::after {
+  width: calc(100% - 30px);
+  transition: 300ms;
+}
+
 .mainmenu ul li a {
   display: block;
   padding: 30px 15px;
