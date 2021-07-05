@@ -74,7 +74,7 @@ img {
 .topbar .topbar-items ol {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -157,20 +157,16 @@ img {
 .navigation {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   align-items: center;
 }
 
-.mainmenu {
-  width: 100%;
-}
-
 .mainmenu ul {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   width: 100%;
 }
@@ -208,5 +204,70 @@ img {
 .mainmenu ul li a:hover {
   color: #0887ed;
   text-decoration: none;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
+.slider-wrapper .search-wrapper {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  transform: translate(0%, -50%);
+}
+
+.slider-wrapper .search-wrapper .search-box {
+  position: relative;
+}
+
+.slider-wrapper .search-wrapper .search-box .search-box-header {
+  position: absolute;
+  left: 50%;
+  right: auto;
+  bottom: -60px;
+  transform: translate(-50%, 0%);
+  width: 100%;
+}
+
+.slider-wrapper .search-wrapper .search-box .search-box-header ul {
+  text-align: center;
+}
+
+.slider-wrapper .search-wrapper .search-box .search-box-header ul li {
+  display: inline-block;
+}
+
+.slider-wrapper .search-wrapper .search-box .search-box-header ul li a {
+  display: block;
+  border: 1px solid #fff;
+  margin: 10px 0px;
+  padding: 5px 10px;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  font-weight: 300;
+}
+
+.slider-wrapper .search-wrapper .search-box .search-box-header ul li a:hover {
+  background-color: #0887ed;
+  border-color: #0887ed;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.slider-wrapper .search-wrapper .search-box .search-box-header ul li.active a {
+  background-color: #0887ed;
+  border-color: #0887ed;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.slider-wrapper .search-wrapper .search-box .search-box-body {
+  background-color: #ffffff;
+  padding: 30px 20px;
+  border-radius: 15px;
 }
 /*# sourceMappingURL=style.css.map */
