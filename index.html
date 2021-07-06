@@ -125,54 +125,164 @@
     <section class="slider-wrapper">
         <div class="sliders owl-carousel">
             <div class="slider-item">
-                <img src="assets/images/sliders/slider-1.jpg" alt="">
+                <div class="slider-bg" style="background-image: url('assets/images/sliders/slider-1.jpg');"></div>
             </div>
             <div class="slider-item">
-                <img src="assets/images/sliders/slider-2.jpg" alt="">
+                <div class="slider-bg" style="background-image: url('assets/images/sliders/slider-2.jpg');"></div>
             </div>
             <div class="slider-item">
-                <img src="assets/images/sliders/slider-3.jpg" alt="">
+                <div class="slider-bg" style="background-image: url('assets/images/sliders/slider-3.jpg');"></div>
             </div>
         </div>
+        <!-- search box -->
         <div class="search-wrapper">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 col-md-6 offset-lg-1">
                         <div class="search-box">
                             <div class="search-box-header">
                                 <ul>
-                                    <li class="active"><a href="#">Resorts Search</a></li>
-                                    <li><a href="#">Tour Package</a></li>
-                                    <li><a href="#">Booking Tracking</a></li>
+                                    <li class="search-item active" data-target_item="#resortSearch">Resorts Search</li>
+                                    <li class="search-item" data-target_item="#tourPackageSearch">Tour Package</li>
+                                    <li class="search-item" data-target_item="#trackBooking">Booking Tracking</li>
                                 </ul>
                             </div>
                             <div class="search-box-body">
-                                <div class="search-box-title">
-                                    <h2>Book & Experience Amazing Places</h2>
+                                <div class="search-box-items active" id="resortSearch">
+                                    <div class="search-box-title">
+                                        <h2>Find your next Destination</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste error voluptates magni ipsum hic rerum!</p>
+                                    </div>
+                                    <form action="">
+                                        <div class="form-group mb-15">
+                                            <div class="input-group">
+                                                <span class="input-group-text">
+                                                    <i class="bx bx-map"></i>
+                                                </span>                                            
+                                                <input type="text" name="" class="form-control" placeholder="Where to go?">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group mb-15">
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">
+                                                            <i class="bx bx-calendar"></i>
+                                                        </span>                                            
+                                                        <input type="text" name="" class="form-control" placeholder="Check in Date">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group mb-15">
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">
+                                                            <i class="bx bx-calendar"></i>
+                                                        </span>                                            
+                                                        <input type="text" name="" class="form-control" placeholder="Check out Date">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-15">
+                                            <div class="input-group">
+                                                <span class="input-group-text">
+                                                    <i class="bx bx-user"></i>
+                                                </span>                                            
+                                                <input type="number" name="" class="form-control" placeholder="Guest">
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-0">
+                                            <buttn class="btn btn-primary w-100">Search</buttn>
+                                        </div>
+                                    </form>
                                 </div>
-                                <form action="">
-                                    <div class="form-group mb-15">
-                                        <input type="text" name="" placeholder="Where to go?" class="form-control" id="">
+                                <div class="search-box-items" id="tourPackageSearch">
+                                    <div class="search-box-title">
+                                        <h2>The Most Relaxing Vacation Place</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste error voluptates magni ipsum hic rerum!</p>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group mb-15">
-                                                <input type="text" name="" placeholder="Where to go?" class="form-control" id="">
+                                    <form action="">
+                                        <div class="form-group mb-15">
+                                            <div class="input-group">
+                                                <span class="input-group-text">
+                                                    <i class="bx bx-map"></i>
+                                                </span>                                            
+                                                <input type="text" name="" class="form-control" placeholder="Where to go?">
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group mb-15">
-                                                <input type="text" name="" placeholder="Where to go?" class="form-control" id="">
+                                        <div class="form-group mb-15">
+                                            <div class="input-group">
+                                                <span class="input-group-text">
+                                                    <i class="bx bx-map"></i>
+                                                </span>
+                                                <div class="select-wrapper">
+                                                    <select name="package_type" class="form-control">
+                                                        <option value="">Tour Package Type</option>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
+                                        <div class="form-group mb-15">
+                                            <div class="input-group">
+                                                <span class="input-group-text">
+                                                    <i class="bx bx-map"></i>
+                                                </span>
+                                                <div class="select-wrapper">
+                                                    <select name="package_type" class="form-control">
+                                                        <option value="">Select Tour Package</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-0">
+                                            <buttn class="btn btn-primary w-100">Search</buttn>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="search-box-items" id="trackBooking">
+                                    <div class="search-box-title">
+                                        <h2>Track Your Booking Indeed</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste error voluptates magni ipsum hic rerum!</p>
                                     </div>
-                                    <div class="form-group mb-15">
-                                        <input type="text" name="" placeholder="Where to go?" class="form-control" id="">
-                                    </div>
-                                    <div class="form-group">
-                                        <buttn class="btn btn-primary w-100">Search</buttn>
-                                    </div>
-                                </form>
+                                    <form action="">                                        
+                                        <div class="form-group mb-15">
+                                            <div class="input-group">
+                                                <span class="input-group-text">
+                                                    <i class="bx bx-map"></i>
+                                                </span>
+                                                <div class="select-wrapper">
+                                                    <select name="package_type" class="form-control">
+                                                        <option value="">Select Booking Type</option>
+                                                        <option value="">Resort Booking</option>
+                                                        <option value="">Tour Package Booking</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group mb-15">
+                                            <div class="input-group">
+                                                <span class="input-group-text">
+                                                    <i class="bx bx-phone"></i>
+                                                </span>                                            
+                                                <input type="text" name="" class="form-control" placeholder="Phone">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group mb-15">
+                                            <div class="input-group">
+                                                <span class="input-group-text">
+                                                    <i class="bx bx-user"></i>
+                                                </span>                                            
+                                                <input type="text" name="" class="form-control" placeholder="Booking no">
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-0">
+                                            <buttn class="btn btn-primary w-100">Search</buttn>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
