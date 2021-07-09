@@ -110,8 +110,8 @@
         }
         
         //packages carousel 
-        if($('#pacakgesCarousel').length > 0) {
-            $('#pacakgesCarousel').owlCarousel({
+        if($('#packageCarousel').length > 0) {
+            $('#packageCarousel').owlCarousel({
                 items: 3,
                 loop: true,
                 dots: false,

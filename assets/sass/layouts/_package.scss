@@ -66,22 +66,35 @@
                 justify-content: space-between;
                 align-items: center;
                 padding: 10px 10px 15px;
-            }
 
-            .booking-btn {
+                .package-price {
+                    font-weight: 600;
+                    font-size: 18px;
 
-                .btn {
-                    border: 1px solid $color_gray;
-                    border-radius: 50px;
-                    padding: 5px 15px;
+                    sup {
+                        font-size: 12px;
+                        font-weight: 400;
+                    }
+                }
 
-                    &:hover {
-                        text-decoration: none;
-                        background-color: $color_secondary;
-                        color: $color_white;
+                .booking-btn {
+
+                    .btn {
+                        border: 1px solid $color_gray;
+                        border-radius: 50px;
+                        padding: 5px 15px;
+    
+                        &:hover {
+                            text-decoration: none;
+                            border-color: $color_primary_dark;
+                            background-color: $color_primary;
+                            color: $color_white;
+                        }
                     }
                 }
             }
+
+            
         }
 
         &:hover {

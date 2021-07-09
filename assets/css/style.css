@@ -872,15 +872,26 @@ h6 {
   padding: 10px 10px 15px;
 }
 
-.packages .package .package-body .booking-btn .btn {
+.packages .package .package-body .package-footer .package-price {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.packages .package .package-body .package-footer .package-price sup {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.packages .package .package-body .package-footer .booking-btn .btn {
   border: 1px solid #c4c7c9;
   border-radius: 50px;
   padding: 5px 15px;
 }
 
-.packages .package .package-body .booking-btn .btn:hover {
+.packages .package .package-body .package-footer .booking-btn .btn:hover {
   text-decoration: none;
-  background-color: #1a2b48;
+  border-color: #0d73c7;
+  background-color: #0887ed;
   color: #ffffff;
 }
 
@@ -1024,7 +1035,7 @@ h6 {
   position: absolute;
   bottom: -30px;
   left: 50%;
-  transform: translate(-30%, 0%);
+  transform: translate(-50%, 0%);
 }
 
 .spots .owl-dots .owl-dot {
