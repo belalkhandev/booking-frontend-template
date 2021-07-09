@@ -4,7 +4,6 @@
         .resort-body {
             border: 1px solid $color_light_gray;
             padding-bottom: 10px;;
-            padding-bottom: 10px;
             border-radius: 5px;
             overflow: hidden;
             background: $color_white;
@@ -13,22 +12,50 @@
                 height: 215px;
                 width: 100%;
                 overflow: hidden;
+                position: relative;
 
                 img {
                     min-width: 100%;
                     min-height: 100%;
                     transition: 200ms ease-out;
                 }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 60px;
+                    background: linear-gradient(to top, $color_secondary, transparent);
+                    opacity: 0.85;
+                    z-index: 1;
+                }
+                
+                .resort-price {
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+                    color: $color_white;
+                    font-size: 20px;
+                    font-weight: 600;
+                    z-index: 999;
+
+                    sup, sub {
+                        font-weight: 300;
+                        font-size: 14px;
+                    }
+                }
             }
 
             .resort-content {
                 padding: 10px 10px 0px 10px;
                 .resort-location {
-                    margin-bottom: 5px;
+                    margin-bottom: 15px;
                 }
     
                 .resort-title {
-                    margin-bottom: 10px;
+                    margin-bottom: 0px;
                     min-height: 45px;
                     display: flex;
                     justify-content: flex-start;
@@ -47,9 +74,22 @@
                     }
                 }
     
+                .resort-facilities {
+                    margin-bottom: 15px;
+
+                     ul {
+                         display: flex;
+                         justify-content: flex-start;
+                         flex-wrap: wrap;
+                         align-items: center;
+                         margin-right: 15px;
+                         grid-gap: 10px;
+                     }
+                }
+
                 .resort-review {
                      display: flex;
-                     justify-content: flex-start;
+                     justify-content: space-between;
                      align-items: center;
 
                      ul {
@@ -94,30 +134,39 @@
         }
     }
 
-    .owl-dots {
-        position: absolute;
-        bottom: -30px;
-        left: 50%;
-        transform: translate(-30%, 0%);
-        
-        .owl-dot {
-            width: 10px;
-            height: 10px;
-            border: 1px solid $color_gray;
-            border-radius: 30px;
-            margin: 0px 3px;
-            transition: 300ms;
-            &:first-child {
-                margin-left: 0px;
+    &.owl-carousel {
+        .owl-nav {
+            margin-top: 15px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            grid-gap: 5px;
+    
+            .owl-prev, .owl-next {
+                background-color: $color_gray !important;
+                color: $color_light_gray !important;
+                padding: 0px 6px !important;
+                border-radius: 3px;
+                opacity: 0;
+                visibility: hidden;
+                transition: 200ms ease-in 100ms;
+                
+                &:hover {
+                    background-color: $color_primary !important;
+                    color: $color_white !important;
+                }
             }
-            &:last-child {
-                margin-right: 0px;
-            }
-
-            &.active {
-                background-color: $color_gray;
-                border-color: none;
-                transition: 300ms;
+        }        
+    }
+    &:hover {
+        &.owl-carousel {
+            .owl-nav {        
+                .owl-prev, .owl-next {
+                    opacity: 1;
+                    visibility: visible;
+                    transition: 300ms ease-in;
+                    
+                }
             }
         }
     }

@@ -7,21 +7,29 @@
     .package {
         .package-body {
             border: 1px solid $color_light_gray;
-            padding-bottom: 10px;;
-            padding-bottom: 10px;
             border-radius: 5px;
-            overflow: hidden;
             background: $color_white;
 
             .package-thumbnail {
-                height: 215px;
+                height: 250px;
                 width: 100%;
                 overflow: hidden;
+                position: relative;
 
                 img {
                     min-width: 100%;
                     min-height: 100%;
                     transition: 200ms ease-out;
+                }
+                
+                .package-category {
+                    position: absolute;
+                    top: 15px;
+                    left: 0px;
+                    background: $color_primary;
+                    color: $color_white;
+                    padding: 5px 15px;
+                    border-radius: 0px 25px 25px 0px;
                 }
             }
 
@@ -50,39 +58,27 @@
                         }
                     }
                 }
-    
-                .package-review {
-                     display: flex;
-                     justify-content: flex-start;
-                     align-items: center;
-
-                     ul {
-                         display: flex;
-                         justify-content: center;
-                         align-items: center;
-                         margin-right: 15px;
-
-                         li {
-                             margin-right: 2px;
-                             color: orange;
-                         }
-                     }
-                }
+                
             }
 
             .package-footer {
-                padding: 0px 10px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                margin-top: 10px;
+                padding: 10px 10px 15px;
+            }
 
-                a {
-                    color: $color_dark_gray;
-                    font-weight: 300;
+            .booking-btn {
+
+                .btn {
+                    border: 1px solid $color_gray;
+                    border-radius: 50px;
+                    padding: 5px 15px;
+
                     &:hover {
                         text-decoration: none;
-                        color: $color_primary;
+                        background-color: $color_secondary;
+                        color: $color_white;
                     }
                 }
             }
@@ -98,30 +94,40 @@
         }
     }
 
-    .owl-dots {
-        position: absolute;
-        bottom: -30px;
-        left: 50%;
-        transform: translate(-30%, 0%);
-        
-        .owl-dot {
-            width: 10px;
-            height: 10px;
-            border: 1px solid $color_gray;
-            border-radius: 30px;
-            margin: 0px 3px;
-            transition: 300ms;
-            &:first-child {
-                margin-left: 0px;
+    &.owl-carousel {
+        .owl-nav {
+            margin-top: 15px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            grid-gap: 5px;
+    
+            .owl-prev, .owl-next {
+                background-color: $color_gray !important;
+                color: $color_light_gray !important;
+                padding: 0px 6px !important;
+                border-radius: 3px;
+                opacity: 0;
+                visibility: hidden;
+                transition: 200ms ease-in 100ms;
+                
+                &:hover {
+                    background-color: $color_primary !important;
+                    color: $color_white !important;
+                }
             }
-            &:last-child {
-                margin-right: 0px;
-            }
-
-            &.active {
-                background-color: $color_gray;
-                border-color: none;
-                transition: 300ms;
+        }        
+    }
+    
+    &:hover {
+        &.owl-carousel {
+            .owl-nav {        
+                .owl-prev, .owl-next {
+                    opacity: 1;
+                    visibility: visible;
+                    transition: 300ms ease-in;
+                    
+                }
             }
         }
     }

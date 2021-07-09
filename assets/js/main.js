@@ -10,7 +10,6 @@
             $('.search-box-body').css({
                 "min-height": document.querySelector(".search-box-items.active").clientHeight
             });
-    
         }, true);
 
         
@@ -29,8 +28,8 @@
         })
 
         //carousel 
-        if($('.carousel').length > 0) {
-            $('.carousel').owlCarousel({
+        if($('.sliders').length > 0) {
+            $('.sliders').owlCarousel({
                 items: 1,
                 loop: true,
                 autoplay: true,
@@ -52,7 +51,7 @@
                 loop: true,
                 nav: false,
                 autoplay: true,
-                autoplayTimeout: 400000,
+                autoplayTimeout: 4000,
                 margin: 15
             });
         }
@@ -62,9 +61,11 @@
             $('#resortsCarousel').owlCarousel({
                 items: 4,
                 loop: true,
-                nav: false,
+                dots: false,
+                nav: true,
+                navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
                 autoplay: true,
-                autoplayTimeout: 400000,
+                autoplayTimeout: 5000,
                 margin: 15
             });
         }
@@ -72,12 +73,14 @@
         //packages carousel 
         if($('#pacakgesCarousel').length > 0) {
             $('#pacakgesCarousel').owlCarousel({
-                items: 4,
+                items: 3,
                 loop: true,
-                nav: false,
+                dots: false,
+                nav: true,
+                navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
                 autoplay: true,
-                autoplayTimeout: 400000,
-                margin: 15
+                autoplayTimeout: 5000,
+                margin: 15,
             });
         }
 
