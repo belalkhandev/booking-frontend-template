@@ -52,7 +52,26 @@
                 nav: false,
                 autoplay: true,
                 autoplayTimeout: 4000,
-                margin: 15
+                margin: 15,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                    },
+
+                    480:{
+                        items:2,
+                    },
+                    768:{
+                        items:3,
+                    },
+                    992:{
+                        items: 4,
+                    },
+                    1600: {
+                        items: 6
+                    }
+                }
             });
         }
         
@@ -66,7 +85,27 @@
                 navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
                 autoplay: true,
                 autoplayTimeout: 5000,
-                margin: 15
+                margin: 15,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                    },
+
+                    480:{
+                        items:2,
+                    },
+                    768:{
+                        items:3,
+                    },
+                    992:{
+                        items: 4,
+                    },
+                    1600: {
+                        items: 6
+                    }
+                }
+
             });
         }
         
@@ -81,6 +120,28 @@
                 autoplay: true,
                 autoplayTimeout: 5000,
                 margin: 15,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                    },
+
+                    480:{
+                        items:2,
+                    },
+
+                    768:{
+                        items:2,
+                    },
+                    
+                    992:{
+                        items:3,
+                    },
+            
+                    1600: {
+                        items: 5
+                    }
+                }
             });
         }
 

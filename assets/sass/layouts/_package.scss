@@ -111,6 +111,11 @@
                 visibility: hidden;
                 transition: 200ms ease-in 100ms;
                 
+                @media screen and (max-width: 767px){
+                    opacity: 1;
+                    visibility: visible;
+                }
+                
                 &:hover {
                     background-color: $color_primary !important;
                     color: $color_white !important;

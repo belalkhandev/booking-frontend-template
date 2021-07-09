@@ -780,6 +780,13 @@ h6 {
   transition: 200ms ease-in 100ms;
 }
 
+@media screen and (max-width: 767px) {
+  .resorts.owl-carousel .owl-nav .owl-prev, .resorts.owl-carousel .owl-nav .owl-next {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 .resorts.owl-carousel .owl-nav .owl-prev:hover, .resorts.owl-carousel .owl-nav .owl-next:hover {
   background-color: #0887ed !important;
   color: #ffffff !important;
@@ -898,6 +905,13 @@ h6 {
   opacity: 0;
   visibility: hidden;
   transition: 200ms ease-in 100ms;
+}
+
+@media screen and (max-width: 767px) {
+  .packages.owl-carousel .owl-nav .owl-prev, .packages.owl-carousel .owl-nav .owl-next {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .packages.owl-carousel .owl-nav .owl-prev:hover, .packages.owl-carousel .owl-nav .owl-next:hover {
@@ -1048,6 +1062,27 @@ h6 {
   grid-auto-flow: dense;
   grid-auto-rows: 180px;
   grid-gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .destinations {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 160px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .destinations {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 130px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .destinations {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 130px;
+  }
 }
 
 .destinations .destination {
