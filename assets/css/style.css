@@ -80,31 +80,37 @@ input[type=number] {
 h1 {
   font-size: 30px;
   font-weight: 700;
+  color: #1a2b48;
 }
 
 h2 {
   font-size: 25px;
   font-weight: 600;
+  color: #1a2b48;
 }
 
 h3 {
   font-size: 20px;
   font-weight: 600;
+  color: #1a2b48;
 }
 
 h4 {
   font-size: 18px;
   font-weight: 600;
+  color: #1a2b48;
 }
 
 h5 {
   font-size: 16px;
   font-weight: 600;
+  color: #1a2b48;
 }
 
 h6 {
   font-size: 14px;
   font-weight: 600;
+  color: #1a2b48;
 }
 
 .dflex-end-center {
@@ -115,6 +121,17 @@ h6 {
 .dflex-center-center {
   justify-content: center;
   align-items: center;
+}
+
+.section-padding {
+  padding: 60px 0px;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 .btn {
@@ -233,6 +250,7 @@ h6 {
   color: #0887ed;
 }
 
+/* Header */
 .topbar {
   background-color: #1a2b48;
   color: #ffffff;
@@ -315,14 +333,51 @@ h6 {
   text-decoration: none;
 }
 
+.header {
+  position: relative;
+}
+
+.header .col-lg-3, .header .col-md-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .header .logo {
   padding: 9px 0px;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .header .logo {
+    width: 75%;
+  }
 }
 
 .header .logo img {
   width: calc(100% - 30px);
 }
 
+.header #rs-menu-bar {
+  cursor: pointer;
+  color: #1a2b48;
+  border-radius: 50%;
+  padding: 0px 5px;
+  display: none;
+}
+
+.header #rs-menu-bar:hover {
+  background-color: #f3f3f3;
+  box-shadow: 0px 0px 0px 10px #f3f3f3;
+}
+
+@media screen and (max-width: 768px) {
+  .header #rs-menu-bar {
+    display: block;
+  }
+}
+
+/* Navigation */
 .navigation {
   display: flex;
   flex-direction: row;
@@ -332,7 +387,7 @@ h6 {
   align-items: center;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .navigation {
     display: none;
   }
@@ -381,8 +436,75 @@ h6 {
   text-decoration: none;
 }
 
+.responsive-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0px 20px;
+  z-index: 9999;
+  max-height: 0px;
+  opacity: 0.25;
+  overflow: hidden;
+  transition: all 200ms ease-in;
+}
+
+.responsive-menu.show {
+  max-height: 100vh;
+  padding: 20px;
+  opacity: 1;
+}
+
+@media screen and (min-width: 769px) {
+  .responsive-menu {
+    display: none;
+  }
+}
+
+.responsive-menu ul li {
+  position: relative;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.responsive-menu ul li::after {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 0%;
+  height: 1px;
+  background: #1a2b48;
+  content: '';
+  transform: translate(0%, 0%);
+  transition: 200ms;
+}
+
+.responsive-menu ul li:hover::after {
+  width: 100%;
+  transition: 300ms;
+}
+
+.responsive-menu ul li:last-child {
+  border-bottom: 0px solid #f3f3f3;
+}
+
+.responsive-menu ul li a {
+  display: block;
+  padding: 10px 0px;
+  color: #05080e;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.responsive-menu ul li a:hover {
+  color: #0887ed;
+  text-decoration: none;
+}
+
+/* Slider */
 .slider-wrapper {
   position: relative;
+  min-height: 500px;
   height: calc(100vh);
   background-color: #0d73c7;
 }
@@ -502,5 +624,472 @@ h6 {
   opacity: 1;
   transform: scale(1);
   transition: 400ms 100ms;
+}
+
+/* Resorts */
+.resorts {
+  position: relative;
+}
+
+.resorts .resort .resort-body {
+  border: 1px solid #f3f3f3;
+  padding-bottom: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.resorts .resort .resort-body .resort-thumbnail {
+  height: 215px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.resorts .resort .resort-body .resort-thumbnail img {
+  min-width: 100%;
+  min-height: 100%;
+  transition: 200ms ease-out;
+}
+
+.resorts .resort .resort-body .resort-content {
+  padding: 10px 10px 0px 10px;
+}
+
+.resorts .resort .resort-body .resort-content .resort-location {
+  margin-bottom: 5px;
+}
+
+.resorts .resort .resort-body .resort-content .resort-title {
+  margin-bottom: 10px;
+  min-height: 45px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.resorts .resort .resort-body .resort-content .resort-title h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.resorts .resort .resort-body .resort-content .resort-title:hover {
+  text-decoration: none;
+}
+
+.resorts .resort .resort-body .resort-content .resort-title:hover h2 {
+  color: #0887ed;
+}
+
+.resorts .resort .resort-body .resort-content .resort-review {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.resorts .resort .resort-body .resort-content .resort-review ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.resorts .resort .resort-body .resort-content .resort-review ul li {
+  margin-right: 2px;
+  color: orange;
+}
+
+.resorts .resort .resort-body .resort-footer {
+  padding: 0px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.resorts .resort .resort-body .resort-footer a {
+  color: #7e7e7e;
+  font-weight: 300;
+}
+
+.resorts .resort .resort-body .resort-footer a:hover {
+  text-decoration: none;
+  color: #0887ed;
+}
+
+.resorts .resort:hover .resort-thumbnail img {
+  transform: scale(1.35);
+  transition: 300ms ease-in;
+}
+
+.resorts .owl-dots {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translate(-30%, 0%);
+}
+
+.resorts .owl-dots .owl-dot {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #c4c7c9;
+  border-radius: 30px;
+  margin: 0px 3px;
+  transition: 300ms;
+}
+
+.resorts .owl-dots .owl-dot:first-child {
+  margin-left: 0px;
+}
+
+.resorts .owl-dots .owl-dot:last-child {
+  margin-right: 0px;
+}
+
+.resorts .owl-dots .owl-dot.active {
+  background-color: #c4c7c9;
+  border-color: none;
+  transition: 300ms;
+}
+
+/* Packages */
+.package-wrapper {
+  background-color: #fafafa;
+}
+
+.packages {
+  position: relative;
+}
+
+.packages .package .package-body {
+  border: 1px solid #f3f3f3;
+  padding-bottom: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.packages .package .package-body .package-thumbnail {
+  height: 215px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.packages .package .package-body .package-thumbnail img {
+  min-width: 100%;
+  min-height: 100%;
+  transition: 200ms ease-out;
+}
+
+.packages .package .package-body .package-content {
+  padding: 10px 10px 0px 10px;
+}
+
+.packages .package .package-body .package-content .package-location {
+  margin-bottom: 5px;
+}
+
+.packages .package .package-body .package-content .package-title {
+  margin-bottom: 10px;
+  min-height: 45px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.packages .package .package-body .package-content .package-title h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.packages .package .package-body .package-content .package-title:hover {
+  text-decoration: none;
+}
+
+.packages .package .package-body .package-content .package-title:hover h2 {
+  color: #0887ed;
+}
+
+.packages .package .package-body .package-content .package-review {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.packages .package .package-body .package-content .package-review ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.packages .package .package-body .package-content .package-review ul li {
+  margin-right: 2px;
+  color: orange;
+}
+
+.packages .package .package-body .package-footer {
+  padding: 0px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.packages .package .package-body .package-footer a {
+  color: #7e7e7e;
+  font-weight: 300;
+}
+
+.packages .package .package-body .package-footer a:hover {
+  text-decoration: none;
+  color: #0887ed;
+}
+
+.packages .package:hover .package-thumbnail img {
+  transform: scale(1.35);
+  transition: 300ms ease-in;
+}
+
+.packages .owl-dots {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translate(-30%, 0%);
+}
+
+.packages .owl-dots .owl-dot {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #c4c7c9;
+  border-radius: 30px;
+  margin: 0px 3px;
+  transition: 300ms;
+}
+
+.packages .owl-dots .owl-dot:first-child {
+  margin-left: 0px;
+}
+
+.packages .owl-dots .owl-dot:last-child {
+  margin-right: 0px;
+}
+
+.packages .owl-dots .owl-dot.active {
+  background-color: #c4c7c9;
+  border-color: none;
+  transition: 300ms;
+}
+
+/* Spots */
+.spots {
+  position: relative;
+}
+
+.spots .spot .spot-body {
+  border: 1px solid #f3f3f3;
+  padding-bottom: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.spots .spot .spot-body .spot-thumbnail {
+  height: 215px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.spots .spot .spot-body .spot-thumbnail img {
+  min-width: 100%;
+  min-height: 100%;
+  transition: 200ms ease-out;
+}
+
+.spots .spot .spot-body .spot-content {
+  padding: 10px 10px 0px 10px;
+}
+
+.spots .spot .spot-body .spot-content .spot-location {
+  margin-bottom: 5px;
+}
+
+.spots .spot .spot-body .spot-content .spot-title {
+  margin-bottom: 10px;
+  min-height: 45px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.spots .spot .spot-body .spot-content .spot-title h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.spots .spot .spot-body .spot-content .spot-title:hover {
+  text-decoration: none;
+}
+
+.spots .spot .spot-body .spot-content .spot-title:hover h2 {
+  color: #0887ed;
+}
+
+.spots .spot .spot-body .spot-content .spot-review {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.spots .spot .spot-body .spot-content .spot-review ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.spots .spot .spot-body .spot-content .spot-review ul li {
+  margin-right: 2px;
+  color: orange;
+}
+
+.spots .spot .spot-body .spot-footer {
+  padding: 0px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.spots .spot .spot-body .spot-footer a {
+  color: #7e7e7e;
+  font-weight: 300;
+}
+
+.spots .spot .spot-body .spot-footer a:hover {
+  text-decoration: none;
+  color: #0887ed;
+}
+
+.spots .spot:hover .spot-thumbnail img {
+  transform: scale(1.35);
+  transition: 300ms ease-in;
+}
+
+.spots .owl-dots {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translate(-30%, 0%);
+}
+
+.spots .owl-dots .owl-dot {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #c4c7c9;
+  border-radius: 30px;
+  margin: 0px 3px;
+  transition: 300ms;
+}
+
+.spots .owl-dots .owl-dot:first-child {
+  margin-left: 0px;
+}
+
+.spots .owl-dots .owl-dot:last-child {
+  margin-right: 0px;
+}
+
+.spots .owl-dots .owl-dot.active {
+  background-color: #c4c7c9;
+  border-color: none;
+  transition: 300ms;
+}
+
+/* Destinations */
+.destination-wrapper {
+  background-color: #fafafa;
+}
+
+.destinations {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: masonry;
+  grid-auto-flow: dense;
+  grid-auto-rows: 180px;
+  grid-gap: 20px;
+}
+
+.destinations .destination {
+  background: #f3f3f3;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.destinations .destination::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to top, #1a2b48, transparent);
+  z-index: -1;
+  opacity: 0.85;
+}
+
+.destinations .destination img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  transition: 250ms;
+}
+
+.destinations .destination h5 {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.destinations .destination .destination-info {
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  transform: translate(-50%, 0%);
+  color: #ffffff;
+  visibility: hidden;
+  opacity: 0;
+  transition: 300ms;
+}
+
+.destinations .destination:hover {
+  text-decoration: none;
+}
+
+.destinations .destination:hover::after {
+  height: 100%;
+}
+
+.destinations .destination:hover img {
+  transform: scale(1.2);
+}
+
+.destinations .destination:hover .destination-info {
+  left: 50%;
+  visibility: visible;
+  opacity: 1;
+  color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */

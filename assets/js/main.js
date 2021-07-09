@@ -28,9 +28,9 @@
             })
         })
 
-        //sliders 
-        if($('.sliders').length > 0) {
-            $('.sliders').owlCarousel({
+        //carousel 
+        if($('.carousel').length > 0) {
+            $('.carousel').owlCarousel({
                 items: 1,
                 loop: true,
                 autoplay: true,
@@ -44,6 +44,51 @@
                 dots: false
             });
         }
+
+        //tourist spot carousel 
+        if($('#spotsCarousel').length > 0) {
+            $('#spotsCarousel').owlCarousel({
+                items: 4,
+                loop: true,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 400000,
+                margin: 15
+            });
+        }
+        
+        //resort carousel 
+        if($('#resortsCarousel').length > 0) {
+            $('#resortsCarousel').owlCarousel({
+                items: 4,
+                loop: true,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 400000,
+                margin: 15
+            });
+        }
+        
+        //packages carousel 
+        if($('#pacakgesCarousel').length > 0) {
+            $('#pacakgesCarousel').owlCarousel({
+                items: 4,
+                loop: true,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 400000,
+                margin: 15
+            });
+        }
+
+        //responsive menu
+        const menus = $('.mainmenu').html();
+        $('.responsive-menu').append(menus);
+
+        $(document).on('click', '#rs-menu-bar', function() {
+            $('.responsive-menu').toggleClass('show');
+        });
+        
 
 
     });
