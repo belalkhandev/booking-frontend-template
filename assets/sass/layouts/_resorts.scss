@@ -127,7 +127,7 @@
         &:hover {
             .resort-thumbnail {
                 img {
-                    transform: scale(1.35);
+                    transform: scale(1.15);
                     transition: 300ms ease-in;
                 }
             }
@@ -172,6 +172,69 @@
                     transition: 300ms ease-in;
                     
                 }
+            }
+        }
+    }
+
+    &.resort-list {
+        .resort {
+            .resort-body {
+                display: flex;
+                padding: 0;
+                margin-bottom: 20px;
+
+                .resort-thumbnail {
+                    width: 40%;
+                    height: 180px;
+                    margin-bottom: 0px;
+
+                    .resort-price {
+                        right: auto;
+                        left: 10px;
+                    }
+                }
+
+                .resort-content {
+                    margin-top: 5px;
+                    position: relative;
+                    .resort-title {
+                       min-height: auto;
+                       margin-bottom: 5px;
+                    }
+
+                    .resort-review {
+                        position: absolute;
+                        bottom: 15px;
+                        left: 0;
+                        width: 100%;
+                        padding: 0px 10px;
+                    }
+                }
+             }
+        }
+    }
+}
+
+.resort-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    
+    strong {
+        font-weight: 500;
+    }
+
+    .sort-dropdown {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h5 {
+            margin-right: 10px;
+        }
+        ul {
+            li:not(:first-child) {
+                display: none;
             }
         }
     }

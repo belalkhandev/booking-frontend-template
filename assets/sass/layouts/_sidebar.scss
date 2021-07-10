@@ -1,0 +1,28 @@
+.sidebar-item {
+    background-color: $color_white;
+    padding: 15px 20px 30px;
+    border: 1px solid $color_light_gray;
+    margin-bottom: 30px;
+    border-radius: 5px;
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+
+    .sidebar-header {
+        margin-bottom: 15px;
+
+        .sidebar-title {
+            font-weight: 500;
+            font-size: 18px;
+        }
+
+        p {
+            color: $color_gray;
+        }
+    }
+
+    .sidebar-body {
+        padding-top: 5px;
+    }
+}

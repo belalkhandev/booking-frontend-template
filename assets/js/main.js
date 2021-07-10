@@ -2,15 +2,17 @@
     "use-strict"
 
     jQuery(document).ready(function(){
-        $('.search-box-body').css({
-            "min-height": document.querySelector(".search-box-items.active").clientHeight
-        });
-
-        window.addEventListener('resize', function(event) {
+        if ($('.search-box-body').length > 0) {
             $('.search-box-body').css({
                 "min-height": document.querySelector(".search-box-items.active").clientHeight
             });
-        }, true);
+
+            window.addEventListener('resize', function(event) {
+                $('.search-box-body').css({
+                    "min-height": document.querySelector(".search-box-items.active").clientHeight
+                });
+            }, true);
+        }
 
         
         //on click tab item
@@ -51,7 +53,8 @@
                 loop: true,
                 nav: false,
                 autoplay: true,
-                autoplayTimeout: 4000,
+                autoplayTimeout: 4500,
+                autoplaySpeed: 1500,
                 margin: 15,
                 responsiveClass:true,
                 responsive:{
@@ -85,6 +88,7 @@
                 navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
                 autoplay: true,
                 autoplayTimeout: 5000,
+                autoplaySpeed: 1500,
                 margin: 15,
                 responsiveClass:true,
                 responsive:{
@@ -118,7 +122,8 @@
                 nav: true,
                 navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
                 autoplay: true,
-                autoplayTimeout: 5000,
+                autoplayTimeout: 4500,
+                autoplaySpeed: 1000,
                 margin: 15,
                 responsiveClass:true,
                 responsive:{

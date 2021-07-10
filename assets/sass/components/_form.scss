@@ -1,5 +1,12 @@
+.form-control {
+    &:focus {
+        box-shadow: none;
+    }
+}
+
 .form-group {
     margin-bottom: 15px;
+    
     .form-control {
         color: $color_secondary;
         font-size: 14px;
@@ -96,9 +103,21 @@
 
 }
 
+.select-wrapper {
+    position: relative;
 
+    .form-control {
+        padding-right: 25px;
+    }
 
-
-
-
-
+    &::after {
+        position: absolute;
+        content: '\f107';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        top: 50%;
+        transform: translate(0%, -50%);
+        right: 10px;
+        color: $color_gray;
+    }
+}

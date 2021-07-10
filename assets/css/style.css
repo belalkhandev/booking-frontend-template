@@ -134,6 +134,10 @@ h6 {
   margin-bottom: 30px;
 }
 
+.bg-gray {
+  background-color: #fafafa;
+}
+
 .btn {
   border: none;
   font-family: "Poppins", sans-serif;
@@ -151,6 +155,10 @@ h6 {
 .btn-secondary {
   background-color: #1a2b48;
   color: #ffffff;
+}
+
+.form-control:focus {
+  box-shadow: none;
 }
 
 .form-group {
@@ -248,6 +256,25 @@ h6 {
   font-size: 12px;
   transition: 300ms;
   color: #0887ed;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper .form-control {
+  padding-right: 25px;
+}
+
+.select-wrapper::after {
+  position: absolute;
+  content: '\f107';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  top: 50%;
+  transform: translate(0%, -50%);
+  right: 10px;
+  color: #c4c7c9;
 }
 
 /* Header */
@@ -758,7 +785,7 @@ h6 {
 }
 
 .resorts .resort:hover .resort-thumbnail img {
-  transform: scale(1.35);
+  transform: scale(1.15);
   transition: 300ms ease-in;
 }
 
@@ -796,6 +823,66 @@ h6 {
   opacity: 1;
   visibility: visible;
   transition: 300ms ease-in;
+}
+
+.resorts.resort-list .resort .resort-body {
+  display: flex;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.resorts.resort-list .resort .resort-body .resort-thumbnail {
+  width: 40%;
+  height: 180px;
+  margin-bottom: 0px;
+}
+
+.resorts.resort-list .resort .resort-body .resort-thumbnail .resort-price {
+  right: auto;
+  left: 10px;
+}
+
+.resorts.resort-list .resort .resort-body .resort-content {
+  margin-top: 5px;
+  position: relative;
+}
+
+.resorts.resort-list .resort .resort-body .resort-content .resort-title {
+  min-height: auto;
+  margin-bottom: 5px;
+}
+
+.resorts.resort-list .resort .resort-body .resort-content .resort-review {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  padding: 0px 10px;
+}
+
+.resort-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.resort-header strong {
+  font-weight: 500;
+}
+
+.resort-header .sort-dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resort-header .sort-dropdown h5 {
+  margin-right: 10px;
+}
+
+.resort-header .sort-dropdown ul li:not(:first-child) {
+  display: none;
 }
 
 /* Packages */
@@ -1165,6 +1252,95 @@ h6 {
   visibility: visible;
   opacity: 1;
   color: #ffffff;
+}
+
+/* page title */
+.page-title-wrapper {
+  position: relative;
+  z-index: 1;
+  padding: 45px 0px;
+}
+
+.page-title-wrapper::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1a2b48;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.page-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-title h2 {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.page-title .breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.page-title .breadcrumbs li {
+  position: relative;
+  margin-right: 20px;
+}
+
+.page-title .breadcrumbs li a {
+  color: #f3f3f3;
+}
+
+.page-title .breadcrumbs li::after {
+  position: absolute;
+  top: 0;
+  left: -13px;
+  content: '\f105';
+  color: #f3f3f3;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.page-title .breadcrumbs li:first-child::after {
+  display: none;
+}
+
+/* page title */
+.sidebar-item {
+  background-color: #ffffff;
+  padding: 15px 20px 30px;
+  border: 1px solid #f3f3f3;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.sidebar-item:last-child {
+  margin-bottom: 0px;
+}
+
+.sidebar-item .sidebar-header {
+  margin-bottom: 15px;
+}
+
+.sidebar-item .sidebar-header .sidebar-title {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.sidebar-item .sidebar-header p {
+  color: #c4c7c9;
+}
+
+.sidebar-item .sidebar-body {
+  padding-top: 5px;
 }
 
 /* Footer */
