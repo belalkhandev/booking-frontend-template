@@ -25,4 +25,10 @@
     .sidebar-body {
         padding-top: 5px;
     }
+
+    &.sticky {
+        position: fixed;
+        top: 0;
+        width: calc(40% - 145px);
+    }
 }

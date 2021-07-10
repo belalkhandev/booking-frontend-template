@@ -120,4 +120,48 @@
             }
         }
     }
+
+    &.spot-list {
+        .spot {
+            margin-bottom: 30px;
+            
+            .spot-body {
+                display: flex;
+                padding: 0;
+                margin-bottom: 0px;
+
+                .spot-thumbnail {
+                    width: 40%;
+                    min-height: 180px;
+                    margin-bottom: 0px;
+
+                    .spot-price {
+                        right: auto;
+                        left: 10px;
+                    }
+                }
+
+                .spot-content {
+                    width: 60%;
+                    margin-top: 5px;
+                    position: relative;
+                    padding-bottom: 50px;
+
+                    .spot-title {
+                       min-height: auto;
+                       margin-bottom: 5px;
+                    }
+
+                    .spot-footer {
+                        position: absolute;
+                        bottom: 5px;
+                        left: 0;
+                        width: 100%;
+                        padding: 0px 10px;
+                    }
+
+                }
+             }
+        }
+    }
 }

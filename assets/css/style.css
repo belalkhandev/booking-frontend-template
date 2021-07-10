@@ -825,10 +825,13 @@ h6 {
   transition: 300ms ease-in;
 }
 
+.resorts.resort-list .resort {
+  margin-bottom: 30px;
+}
+
 .resorts.resort-list .resort .resort-body {
   display: flex;
   padding: 0;
-  margin-bottom: 20px;
 }
 
 .resorts.resort-list .resort .resort-body .resort-thumbnail {
@@ -852,7 +855,7 @@ h6 {
   margin-bottom: 5px;
 }
 
-.resorts.resort-list .resort .resort-body .resort-content .resort-review {
+.resorts.resort-list .resort .resort-body .resort-content .resort-footer {
   position: absolute;
   bottom: 15px;
   left: 0;
@@ -1148,6 +1151,47 @@ h6 {
   transition: 300ms;
 }
 
+.spots.spot-list .spot {
+  margin-bottom: 30px;
+}
+
+.spots.spot-list .spot .spot-body {
+  display: flex;
+  padding: 0;
+  margin-bottom: 0px;
+}
+
+.spots.spot-list .spot .spot-body .spot-thumbnail {
+  width: 40%;
+  min-height: 180px;
+  margin-bottom: 0px;
+}
+
+.spots.spot-list .spot .spot-body .spot-thumbnail .spot-price {
+  right: auto;
+  left: 10px;
+}
+
+.spots.spot-list .spot .spot-body .spot-content {
+  width: 60%;
+  margin-top: 5px;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.spots.spot-list .spot .spot-body .spot-content .spot-title {
+  min-height: auto;
+  margin-bottom: 5px;
+}
+
+.spots.spot-list .spot .spot-body .spot-content .spot-footer {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  padding: 0px 10px;
+}
+
 /* Destinations */
 .destination-wrapper {
   background-color: #fafafa;
@@ -1341,6 +1385,12 @@ h6 {
 
 .sidebar-item .sidebar-body {
   padding-top: 5px;
+}
+
+.sidebar-item.sticky {
+  position: fixed;
+  top: 0;
+  width: calc(40% - 145px);
 }
 
 /* Footer */

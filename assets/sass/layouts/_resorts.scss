@@ -178,10 +178,11 @@
 
     &.resort-list {
         .resort {
+            margin-bottom: 30px;
+
             .resort-body {
                 display: flex;
                 padding: 0;
-                margin-bottom: 20px;
 
                 .resort-thumbnail {
                     width: 40%;
@@ -202,13 +203,15 @@
                        margin-bottom: 5px;
                     }
 
-                    .resort-review {
+                    .resort-footer {
                         position: absolute;
                         bottom: 15px;
                         left: 0;
                         width: 100%;
                         padding: 0px 10px;
                     }
+
+                    
                 }
              }
         }

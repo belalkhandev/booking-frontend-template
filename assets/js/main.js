@@ -1,3 +1,5 @@
+
+
 (function($){
     "use-strict"
 
@@ -14,6 +16,12 @@
             }, true);
         }
 
+        //on scroll 
+        window.addEventListener('scroll', function(){
+            const sidebar = document.getElementById('stickySidebar');
+            const sidebar_height = document.querySelector("#stickySidebar").clientHeight;
+            sidebar.classList.toggle('sticky', window.scrollY >= sidebar_height);
+        });
         
         //on click tab item
         $(document).on('click', '.search-item', function() {
