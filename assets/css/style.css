@@ -200,6 +200,27 @@ h6 {
   border-radius: 5px;
 }
 
+.modal .modal-content .modal-header {
+  border-bottom: 0px solid #f3f3f3;
+}
+
+.modal .modal-content .modal-header .modal-close {
+  background: none !important;
+  border: none;
+  color: #c4c7c9;
+  padding: 0px 5px;
+}
+
+.modal .modal-content .modal-header .modal-close:hover {
+  color: #df1c3d;
+}
+
+.modal .modal-content .modal-footer {
+  border-top: 0px solid #f3f3f3;
+  text-align: center;
+  justify-content: center;
+}
+
 .form-control:focus {
   box-shadow: none;
 }
@@ -1554,6 +1575,30 @@ h6 {
   top: 0;
   width: calc(40% - 145px);
   z-index: 999;
+}
+
+/* Login */
+.login-form .form-footer-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reset-password-form strong {
+  margin-bottom: 20px;
+  font-weight: 500;
+  display: block;
+}
+
+/* Register */
+.register-form .form-footer-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* Footer */

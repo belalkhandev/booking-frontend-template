@@ -36,7 +36,35 @@
             opacity: 1;
             visibility: visible;
             transition: 400ms 100ms;
-    border-radius: 5px;
+            border-radius: 5px;
+        }
+    }
+}
+
+.modal {
+    .modal-content {
+        .modal-header {
+            border-bottom: 0px solid $color_light_gray;
+
+            .modal-close {
+                background: none !important;
+                border: none;
+                color: $color_gray;
+                padding: 0px 5px;
+                &:hover {
+                    color: $color_danger;
+                }
+            }
+        }
+
+        .modal-body {
+
+        }
+
+        .modal-footer {
+            border-top: 0px solid $color_light_gray;
+            text-align: center;
+            justify-content: center;
         }
     }
 }

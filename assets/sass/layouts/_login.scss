@@ -1,0 +1,16 @@
+.login-form {
+    .form-footer-group {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.reset-password-form {
+    strong {
+        margin-bottom: 20px;
+        font-weight: 500;
+        display: block;
+    }
+}

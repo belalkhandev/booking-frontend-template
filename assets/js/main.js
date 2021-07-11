@@ -9,6 +9,8 @@
             });
         }
 
+        
+
         window.addEventListener('resize', function(event) {
             $('.search-box-body').css({
                 "min-height": document.querySelector(".search-box-items.active").clientHeight
@@ -194,6 +196,33 @@
         $(document).on('click', '#rs-menu-bar', function() {
             $('.responsive-menu').toggleClass('show');
         });
+
+        $(document).on('click', '.open-login', function (ev) {
+            ev.preventDefault();
+            $('#signUpModal').modal('hide');
+            $('#resetPasswordModal').modal('hide');
+            setTimeout(function () {
+                $('#loginModal').modal('show');
+            }, 500);
+        });
+
+        $(document).on('click', '.open-signup', function (ev) {
+            ev.preventDefault();
+            $('#loginModal').modal('hide');
+            setTimeout(function () {
+                $('#signUpModal').modal('show');
+            }, 500);
+        });
+
+        $(document).on('click', '.open-resetpasword', function (ev) {
+            ev.preventDefault();
+            $('#loginModal').modal('hide');
+            setTimeout(function () {
+                $('#resetPasswordModal').modal('show');
+            }, 500);
+        });
+
+        $('[data-toggle="tooltip"]').tooltip();
         
 
 

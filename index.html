@@ -69,10 +69,10 @@
                                                 <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
                                             </li>
                                             <li>                                    
-                                                <a href="">Sign Up</a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#signUpModal">Sign Up</a>
                                             </li>
                                             <li>
-                                                <a href="">Lang</a>
+                                                <a href="">বাংলা</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -1614,20 +1614,59 @@
     </footer>
     <!-- /footer -->
 
+    <!-- Forgot Password -->
+    <div class="modal fade" id="resetPasswordModal" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Reset Password</h5>
+                    <button type="button" class="modal-close" data-bs-dismiss="modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="reset-password-form">
+                        <strong>Enter the e-mail address associated with the account. We'll e-mail a link to reset your password.</strong>
+
+                        <div class="form-group">
+                            <label for="">Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bx bx-envelope"></i>
+                                </span>
+                                <input type="email" name="username" placeholder="Email" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group mt-20">
+                            <buttn class="btn btn-primary w-100">Send Reset Link</buttn>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer pb-30">
+                    <h5><a href="#" class="open-login">Back to Login </a></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Login Modal -->
     <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Login</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="modal-close" data-bs-dismiss="modal">
+                        <i class="fas fa-times"></i>
+                    </button>
                 </div>
-                <form action="">
-                    <div class="modal-body">
+                <div class="modal-body">
+                    <form action="" class="login-form">
                         <div class="form-group">
-                            <label for="">Email / Username</label>
+                            <label for="">Email or Username</label>
                             <div class="input-group">
                                 <span class="input-group-text">
-                                    <i class="bx bx-map"></i>
+                                    <i class="bx bx-user"></i>
                                 </span>
                                 <input type="text" name="username" placeholder="Username" class="form-control">
                             </div>
@@ -1636,16 +1675,104 @@
                             <label for="">Password</label>
                             <div class="input-group">
                                 <span class="input-group-text">
-                                    <i class="bx bx-map"></i>
+                                    <i class="bx bx-lock"></i>
+                                </span>
+                                <input type="text" name="username" placeholder="******" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group mt-20">
+                            <buttn class="btn btn-primary w-100">Login</buttn>
+                        </div>
+                        <div class="form-footer-group">
+                            <label for="">
+                                <input type="checkbox" name="" id="">
+                                <span>Remember Me</span>
+                            </label>
+                            <a href="#" class="open-resetpasword">Forgot Password?</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer pb-30">
+                    <h5>Do not have an Account? <a href="#" class="open-signup">Sign Up</a></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Register modal -->
+    <div class="modal fade" id="signUpModal" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign Up</h5>
+                    <button type="button" class="modal-close" data-bs-dismiss="modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="register-form">
+                        <div class="form-group">
+                            <label for="">Name</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bx bx-user"></i>
                                 </span>
                                 <input type="text" name="username" placeholder="Username" class="form-control">
                             </div>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <buttn class="btn btn-primary w-100">Login</buttn>
-                    </div>
-                </form>
+
+                        <div class="form-group">
+                            <label for="">Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bx bx-envelope"></i>
+                                </span>
+                                <input type="email" name="email" placeholder="Email" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Phone</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bx bx-envelope"></i>
+                                </span>
+                                <input type="text" name="username" placeholder="Username" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Password</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="bx bx-lock"></i>
+                                        </span>
+                                        <input type="password" name="password" placeholder="******" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Confirm Password</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="bx bx-lock"></i>
+                                        </span>
+                                        <input type="password" name="password_confirmation" placeholder="******" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mt-20">
+                            <buttn class="btn btn-primary w-100">Create Account</buttn>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer pb-30">
+                    <h5>Already have an Account? <a href="#" class="open-login">Login</a></h5>
+                </div>
             </div>
         </div>
     </div>
