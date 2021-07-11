@@ -1,27 +1,28 @@
-
-
 (function($){
     "use-strict"
 
     jQuery(document).ready(function(){
+
         if ($('.search-box-body').length > 0) {
             $('.search-box-body').css({
                 "min-height": document.querySelector(".search-box-items.active").clientHeight
             });
-
-            window.addEventListener('resize', function(event) {
-                $('.search-box-body').css({
-                    "min-height": document.querySelector(".search-box-items.active").clientHeight
-                });
-            }, true);
         }
 
-        //on scroll 
-        window.addEventListener('scroll', function(){
-            const sidebar = document.getElementById('stickySidebar');
-            const sidebar_height = document.querySelector("#stickySidebar").clientHeight;
-            sidebar.classList.toggle('sticky', window.scrollY >= sidebar_height);
-        });
+        window.addEventListener('resize', function(event) {
+            $('.search-box-body').css({
+                "min-height": document.querySelector(".search-box-items.active").clientHeight
+            });
+        }, true);
+
+        //on scroll
+        if ($('#stickySidebar').length > 0) {
+            window.addEventListener('scroll', function(){
+                const sidebar = document.getElementById('stickySidebar');
+                const sidebar_height = document.querySelector("#stickySidebar").clientHeight;
+                sidebar.classList.toggle('sticky', window.scrollY >= sidebar_height);
+            });
+        }
         
         //on click tab item
         $(document).on('click', '.search-item', function() {
@@ -36,7 +37,7 @@
                 "min-height": box_height
             })
         })
-
+        
         //carousel 
         if($('.sliders').length > 0) {
             $('.sliders').owlCarousel({
@@ -50,6 +51,34 @@
                 touchDrag  : true,
                 mouseDrag  : false,
                 nav: false,
+                dots: false
+            });
+        }
+
+        //carousel 
+        if($('#resortGalleryCarousel').length > 0) {
+            $('#resortGalleryCarousel').owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                smartSpeed:1000,
+                nav: true,
+                navText: ['<i class="bx bx-left-arrow-alt"></i>', '<i class="bx bx-right-arrow-alt"></i>'],
+                dots: false
+            });
+        }
+
+        //carousel 
+        if($('#spotGalleryCarousel').length > 0) {
+            $('#spotGalleryCarousel').owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                smartSpeed:1000,
+                nav: true,
+                navText: ['<i class="bx bx-left-arrow-alt"></i>', '<i class="bx bx-right-arrow-alt"></i>'],
                 dots: false
             });
         }

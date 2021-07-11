@@ -20,7 +20,6 @@
 </head>
 
 <body>
-
     <!-- header -->
     <header>
         <!-- topbar -->
@@ -67,7 +66,7 @@
                                     <div class="topbar-nav">
                                         <ul>                                            
                                             <li>
-                                                <a href="">Login</a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
                                             </li>
                                             <li>                                    
                                                 <a href="">Sign Up</a>
@@ -1615,6 +1614,42 @@
     </footer>
     <!-- /footer -->
 
+    <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="">Email / Username</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bx bx-map"></i>
+                                </span>
+                                <input type="text" name="username" placeholder="Username" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bx bx-map"></i>
+                                </span>
+                                <input type="text" name="username" placeholder="Username" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <buttn class="btn btn-primary w-100">Login</buttn>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
     <!-- scripts -->
     <script src="assets/vendors/jquery/jquery.min.js"></script>
     <script src="assets/vendors/bootstrap/js/popper.min.js"></script>

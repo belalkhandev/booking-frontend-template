@@ -242,3 +242,74 @@
         }
     }
 }
+
+.resort-details {
+    background: $color_white;
+    
+    .resort {
+        .resort-header{
+        
+        }
+
+        .resort-body {
+            border: none;
+            background: none;
+        }
+
+        .resort-footer {
+
+        }
+    }
+}
+
+.resort-carousel {   
+    &.owl-carousel {
+        position: relative;
+
+        .owl-next, .owl-prev {
+            position: absolute;
+            top: 50%;
+            left: -40px;
+            transition: 300ms;
+
+            i {
+                color: $color_white;
+                background-color: #0000008c;
+                padding: 5px 7px;
+                font-size: 25px;
+                border-radius: 3px;
+            }
+        }
+        
+        .owl-next {
+            left: auto;
+            right: -40px;
+        }
+
+        &:hover {
+            .owl-prev {
+                left: 20px;
+                transition: 500ms;
+            }
+
+            .owl-next {
+                left: auto;
+                right: 20px;
+                transition: 500ms;
+            }
+        }
+
+        @media screen and (max-width: 768px){
+            .owl-prev {
+                left: 20px;
+                transition: 500ms;
+            }
+
+            .owl-next {
+                left: auto;
+                right: 20px;
+                transition: 500ms;
+            }
+        }
+    }
+}
