@@ -223,6 +223,13 @@
         });
 
         $('[data-toggle="tooltip"]').tooltip();
+
+        // default datepicker
+        $('.datepicker').datepicker({
+            todayHighlight: true,
+            format: "yyyy-mm-dd",
+            autoclose: true
+        });
         
 
 

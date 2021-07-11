@@ -1,0 +1,52 @@
+.datepicker {
+    font-size: 14px;
+    padding: 10px;
+
+    .datepicker-days {
+        .datepicker-title {
+            color: $color_primary;
+        }
+
+        .prev, .next {
+            color: $color_gray;
+        }
+
+        .datepicker-switch {
+            color: $color_primary;
+        }
+
+        .dow {
+            padding: 5px 7px;
+            font-weight: 500;
+            color: $color_secondary;
+        }
+
+        .day {
+            padding: 6px 10px;
+            border-radius: 0px !important;
+
+            &:hover {
+                background-color: $color_light_gray;
+            }
+
+            &.today {
+                background: $color_secondary !important;
+                color: #fff !important;
+            }
+
+            &.old {
+                color: $color_danger;
+                opacity: 0.5;
+            }
+
+            &.active {
+                background: $color_primary !important
+            }
+
+            &.new {
+                color: $color_gray;
+                opacity: 0.7;
+            }
+        }
+    }
+}

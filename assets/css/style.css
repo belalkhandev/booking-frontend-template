@@ -341,6 +341,57 @@ h6 {
   color: #c4c7c9;
 }
 
+.datepicker {
+  font-size: 14px;
+  padding: 10px;
+}
+
+.datepicker .datepicker-days .datepicker-title {
+  color: #0887ed;
+}
+
+.datepicker .datepicker-days .prev, .datepicker .datepicker-days .next {
+  color: #c4c7c9;
+}
+
+.datepicker .datepicker-days .datepicker-switch {
+  color: #0887ed;
+}
+
+.datepicker .datepicker-days .dow {
+  padding: 5px 7px;
+  font-weight: 500;
+  color: #1a2b48;
+}
+
+.datepicker .datepicker-days .day {
+  padding: 6px 10px;
+  border-radius: 0px !important;
+}
+
+.datepicker .datepicker-days .day:hover {
+  background-color: #f3f3f3;
+}
+
+.datepicker .datepicker-days .day.today {
+  background: #1a2b48 !important;
+  color: #fff !important;
+}
+
+.datepicker .datepicker-days .day.old {
+  color: #df1c3d;
+  opacity: 0.5;
+}
+
+.datepicker .datepicker-days .day.active {
+  background: #0887ed !important;
+}
+
+.datepicker .datepicker-days .day.new {
+  color: #c4c7c9;
+  opacity: 0.7;
+}
+
 /* Header */
 .topbar {
   background-color: #1a2b48;
