@@ -1683,6 +1683,43 @@ h6 {
   padding: 15px 0px 0px;
 }
 
+.sidebar-item .sidebar-card {
+  border-top: 1px solid #f3f3f3;
+  margin: 15px 0px;
+  padding: 15px 0px;
+}
+
+.sidebar-item .info-list li {
+  margin-bottom: 15px;
+}
+
+.sidebar-item .info-list li a {
+  color: #1a2b48;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.user-avatar {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 3px #ffffff, 0px 0px 0px 4px #f3f3f3;
+}
+
+.user-avatar img {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.user-name {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
 /* Login */
 .login-form .form-footer-group {
   display: flex;
@@ -1723,6 +1760,7 @@ h6 {
   background-color: #ffffff;
   padding: 15px 20px;
   border-radius: 5px;
+  border: 1px solid #f3f3f3;
 }
 
 .dashboard .nav.nav-tabs {
@@ -1732,7 +1770,7 @@ h6 {
 
 .dashboard .nav.nav-tabs .nav-item .nav-link {
   color: #1a2b48;
-  padding: 10px 12px;
+  padding: 10px 15px;
   border: none;
   position: relative;
   background: none;
@@ -1770,7 +1808,7 @@ h6 {
 }
 
 .dashboard .nav.nav-tabs .nav-item .nav-link.active::after {
-  width: calc(100% - 24px);
+  width: calc(100% - 30px);
   visibility: visible;
   opacity: 1;
   transition: 300ms;
@@ -1778,6 +1816,7 @@ h6 {
 
 .dashboard .tab-content {
   padding: 10px 0px;
+  min-height: calc(100vh - 22vh);
 }
 
 /* Footer */

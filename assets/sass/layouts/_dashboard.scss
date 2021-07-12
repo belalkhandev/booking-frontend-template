@@ -2,6 +2,7 @@
     background-color: $color_white;
     padding: 15px 20px;
     border-radius: 5px;
+    border: 1px solid $color_light_gray;
 
     .nav {
         &.nav-tabs {
@@ -11,7 +12,7 @@
             .nav-item {
                 .nav-link {
                     color: $color_secondary;
-                    padding: 10px 12px;
+                    padding: 10px 15px;
                     border: none;
                     position: relative;
                     background: none;
@@ -48,7 +49,7 @@
                         border: none !important;
                         
                         &::after {
-                            width: calc(100% - 24px);
+                            width: calc(100% - 30px);
                             visibility: visible;
                             opacity: 1;
                             transition: 300ms;
@@ -62,5 +63,6 @@
 
     .tab-content {
         padding: 10px 0px;
+        min-height: calc(100vh - 22vh);
     }
 }
