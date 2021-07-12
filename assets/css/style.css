@@ -341,6 +341,47 @@ h6 {
   color: #c4c7c9;
 }
 
+.has-search-preview {
+  position: relative;
+}
+
+.has-search-preview .search-preview-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 120px;
+  overflow-y: auto;
+  background-color: #ffffff;
+  z-index: 999;
+  display: none;
+}
+
+.has-search-preview .search-preview-items.show {
+  display: block;
+}
+
+.has-search-preview .search-preview-items .search-preview-item {
+  display: flex;
+  border-bottom: 1px solid #f3f3f3;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 5px 0px;
+}
+
+.has-search-preview .search-preview-items .search-preview-item .search-item-icon {
+  width: 30px;
+  text-align: center;
+}
+
+.has-search-preview .search-preview-items .search-preview-item:last-child {
+  border-bottom: none;
+}
+
+.has-search-preview .search-preview-items .search-preview-item:hover {
+  background-color: #f3f3f3;
+}
+
 .datepicker {
   font-size: 14px;
   padding: 10px;
@@ -1742,6 +1783,6 @@ h6 {
 .footer-copyright {
   background-color: #05080e;
   padding: 15px 0px;
-  color: #ffffff;
+  color: #c4c7c9;
 }
 /*# sourceMappingURL=style.css.map */

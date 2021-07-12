@@ -230,6 +230,21 @@
             format: "yyyy-mm-dd",
             autoclose: true
         });
+
+        $(document).on('click', '.has-search-preview', function () {
+            $('.search-preview-items').addClass('show');
+        });
+
+        $(document).click(function(e) 
+        {
+            var container = $(".has-search-preview");
+
+            // if the target of the click isn't the container nor a descendant of the container
+            if (!container.is(e.target) && container.has(e.target).length === 0) 
+            {
+                $('.search-preview-items').removeClass('show');
+            }
+        });
         
 
 
