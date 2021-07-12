@@ -238,6 +238,10 @@ h6 {
   height: 40px;
 }
 
+.form-group .form-control.textarea {
+  height: auto;
+}
+
 .form-group .form-control:focus {
   outline: none;
   box-shadow: none;
@@ -470,6 +474,12 @@ h6 {
 
 .topbar .topbar-items ol li a {
   color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .topbar .topbar-items ol {
+    justify-content: space-between;
+  }
 }
 
 .topbar .topbar-social-nav ul {
@@ -1669,6 +1679,10 @@ h6 {
   z-index: 999;
 }
 
+.sidebar-item .sidebar-footer {
+  padding: 15px 0px 0px;
+}
+
 /* Login */
 .login-form .form-footer-group {
   display: flex;
@@ -1691,6 +1705,79 @@ h6 {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+
+/* Checkout */
+.checkout-wrapper .checkout-form {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 15px 20px;
+}
+
+.checkout-wrapper .checkout-form .form-group {
+  margin-bottom: 20px;
+}
+
+/* Dashboard */
+.dashboard {
+  background-color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 5px;
+}
+
+.dashboard .nav.nav-tabs {
+  border-bottom: 1px solid #f3f3f3 !important;
+  margin-bottom: 10px;
+}
+
+.dashboard .nav.nav-tabs .nav-item .nav-link {
+  color: #1a2b48;
+  padding: 10px 12px;
+  border: none;
+  position: relative;
+  background: none;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.dashboard .nav.nav-tabs .nav-item .nav-link::after {
+  position: absolute;
+  content: '';
+  width: 0%;
+  height: 1px;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background: #0887ed;
+  visibility: hidden;
+  opacity: 0;
+  transition: 200ms;
+}
+
+.dashboard .nav.nav-tabs .nav-item .nav-link:hover {
+  color: #0887ed;
+}
+
+.dashboard .nav.nav-tabs .nav-item .nav-link:focus {
+  border: none !important;
+  color: #0887ed;
+}
+
+.dashboard .nav.nav-tabs .nav-item .nav-link.active {
+  color: #0887ed;
+  border: none !important;
+}
+
+.dashboard .nav.nav-tabs .nav-item .nav-link.active::after {
+  width: calc(100% - 24px);
+  visibility: visible;
+  opacity: 1;
+  transition: 300ms;
+}
+
+.dashboard .tab-content {
+  padding: 10px 0px;
 }
 
 /* Footer */

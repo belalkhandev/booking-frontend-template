@@ -1,0 +1,66 @@
+.dashboard {
+    background-color: $color_white;
+    padding: 15px 20px;
+    border-radius: 5px;
+
+    .nav {
+        &.nav-tabs {
+            border-bottom: 1px solid $color_light_gray !important;
+            margin-bottom: 10px;
+
+            .nav-item {
+                .nav-link {
+                    color: $color_secondary;
+                    padding: 10px 12px;
+                    border: none;
+                    position: relative;
+                    background: none;
+                    margin: 0;
+                    font-family: $font_secondary;
+                    font-weight: 400;
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        width: 0%;
+                        height: 1px;
+                        top: 100%;
+                        left: 50%;
+                        transform: translate(-50%, 0%);
+                        background: $color_primary;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: 200ms;
+                    }
+
+
+                    &:hover {
+                        color: $color_primary;
+                    }
+
+                    &:focus {
+                        border: none !important;
+                        color: $color_primary;
+                    }
+
+                    &.active {
+                        color: $color_primary;
+                        border: none !important;
+                        
+                        &::after {
+                            width: calc(100% - 24px);
+                            visibility: visible;
+                            opacity: 1;
+                            transition: 300ms;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        padding: 10px 0px;
+    }
+}
