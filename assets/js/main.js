@@ -246,8 +246,14 @@
             }
         });
         
-
-
     });
+
+    jQuery(window).on('load', function() {
+        if ($('.pre-loader').length > 0) {
+            $('.pre-loader').css({display: 'none'})
+        }
+    });
+
+
 
 }(jQuery))
